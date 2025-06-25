@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import kr.smhrd.lunch.dto.GoodsDTO;
 import kr.smhrd.lunch.service.GoodsService;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://43.201.30.191:5173")
 @RestController
 @RequestMapping("/api")
 public class GoodsController {
@@ -21,7 +21,7 @@ public class GoodsController {
 	GoodsService goodsService;
 	
 	@GetMapping("/goods_list/{id}")
-	public GoodsDTO getGoodsDetail(@PathVariable("id") int id) {
+	public GoodsDTO getGoodsD(@PathVariable("id") int id) {
 		
 		GoodsDTO goodsDetail = goodsService.getGoodsDetail(id);
 		
